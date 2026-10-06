@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Kinderwald Nursery | Technical Support
+  </title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+
+      margin: 0;
+
+      font-family:
+        Arial,
+        Tahoma,
+        sans-serif;
+
+      background: #f7f3ea;
+
+      color: #26332d;
+
+    }
+
+    .container {
+
+      max-width: 700px;
+
+      margin: 0 auto;
+
+      padding: 30px 16px 50px;
+
+    }
+
+    .header {
+
+      text-align: center;
+
+      margin-bottom: 25px;
+
+    }
+
+    .header h1 {
+
+      margin: 0;
+
+      color: #315c4b;
+
+      font-size: 30px;
+
+    }
+
+    .header p {
+
+      color: #68756f;
+
+      font-size: 18px;
+
+      margin-top: 8px;
+
+    }
+
+    .card {
+
+      background: white;
+
+      padding: 25px;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 8px 30px
+        rgba(0,0,0,0.08);
+
+    }
+
+    .field {
+
+      margin-bottom: 18px;
+
+    }
+
+    label {
+
+      display: block;
+
+      font-weight: bold;
+
+      margin-bottom: 8px;
+
+      line-height: 1.5;
+
+    }
+
+    input,
+    select,
+    textarea {
+
+      width: 100%;
+
+      padding: 13px;
+
+      border: 1px solid #dce3de;
+
+      border-radius: 10px;
+
+      font-size: 16px;
+
+      font-family:
+        Arial,
+        Tahoma,
+        sans-serif;
+
+      background: white;
+
+    }
+
+    textarea {
+
+      min-height: 130px;
+
+      resize: vertical;
+
+    }
+
+    input[type="file"] {
+
+      padding: 10px;
+
+    }
+
+    .required {
+
+      color: #b42318;
+
+    }
+
+    .hint {
+
+      font-size: 13px;
+
+      color: #68756f;
+
+      margin-top: 6px;
+
+    }
+
+    button {
+
+      width: 100%;
+
+      border: none;
+
+      padding: 15px;
+
+      border-radius: 10px;
+
+      background: #315c4b;
+
+      color: white;
+
+      font-size: 17px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+    }
+
+    button:hover {
+
+      opacity: 0.9;
+
+    }
+
+    button:disabled {
+
+      opacity: 0.6;
+
+      cursor: not-allowed;
+
+    }
+
+    .error {
+
+      display: none;
+
+      margin-top: 15px;
+
+      padding: 12px;
+
+      border-radius: 10px;
+
+      background: #fff0f0;
+
+      color: #9b2c2c;
+
+    }
+
+    .success {
+
+      display: none;
+
+      text-align: center;
+
+    }
+
+    .success h2 {
+
+      color: #315c4b;
+
+    }
+
+    .ticket {
+
+      font-size: 30px;
+
+      font-weight: bold;
+
+      color: #315c4b;
+
+      margin: 20px 0;
+
+      direction: ltr;
+
+    }
+
+    .footer {
+
+      text-align: center;
+
+      color: #68756f;
+
+      font-size: 12px;
+
+      margin-top: 20px;
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+  <!-- HEADER -->
+
+  <div class="header">
+
+    <h1>
+      Kinderwald Nursery
+    </h1>
+
+    <p>
+      Technical Support — الدعم الفني
+    </p>
+
+  </div>
+
+
+  <!-- FORM -->
+
+  <div
+    class="card"
+    id="formCard"
+  >
+
+    <form
+      id="supportForm"
+    >
+
+
+      <!-- PARENT -->
+
+      <div class="field">
+
+        <label for="parentName">
+
+          Parent / Guardian Name —
+          اسم ولي الأمر
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <input
+          type="text"
+          id="parentName"
+          name="parentName"
+          required
+        >
+
+      </div>
+
+
+      <!-- CHILD -->
+
+      <div class="field">
+
+        <label for="childName">
+
+          Child Name —
+          اسم الطفل
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <input
+          type="text"
+          id="childName"
+          name="childName"
+          required
+        >
+
+      </div>
+
+
+      <!-- CLASS -->
+
+      <div class="field">
+
+        <label for="className">
+
+          Child Class —
+          فصل الطفل
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <select
+          id="className"
+          name="className"
+          required
+        >
+
+          <option value="">
+            Select Class — اختاري الفصل
+          </option>
+
+          <option value="Bunnies">
+            Bunnies
+          </option>
+
+          <option value="Pandas">
+            Pandas
+          </option>
+
+          <option value="Koalas">
+            Koalas
+          </option>
+
+          <option value="Kangaroo">
+            Kangaroo
+          </option>
+
+          <option value="Squillers">
+            Squillers
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- MOBILE -->
+
+      <div class="field">
+
+        <label for="mobile">
+
+          Mobile Number —
+          رقم الموبايل
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          required
+        >
+
+      </div>
+
+
+      <!-- EMAIL -->
+
+      <div class="field">
+
+        <label for="email">
+
+          Email —
+          البريد الإلكتروني
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+        >
+
+      </div>
+
+
+      <!-- ISSUE -->
+
+      <div class="field">
+
+        <label for="issueType">
+
+          Issue Type —
+          نوع المشكلة
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <select
+          id="issueType"
+          name="issueType"
+          required
+        >
+
+          <option value="">
+            Select Issue — اختاري المشكلة
+          </option>
+
+          <option value="Request Child Code">
+
+            Request Child Code —
+            طلب كود الطفل
+
+          </option>
+
+          <option value="App Problems">
+
+            App Problems —
+            مشكلة في التطبيق
+
+          </option>
+
+          <option value="Request Username (Email)">
+
+            Request Username (Email) —
+            طلب اسم المستخدم (Email)
+
+          </option>
+
+          <option value="Payment Problems">
+
+            Payment Problems —
+            مشكلة في الدفع
+
+          </option>
+
+          <option value="Other Technical Problems">
+
+            Other Technical Problems —
+            مشاكل تقنية أخرى
+
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- PRIORITY -->
+
+      <div class="field">
+
+        <label for="priority">
+
+          Priority —
+          الأولوية
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <select
+          id="priority"
+          name="priority"
+          required
+        >
+
+          <option value="">
+            Select Priority — اختاري الأولوية
+          </option>
+
+          <option value="Normal">
+
+            Normal — عادية
+
+          </option>
+
+          <option value="Urgent">
+
+            Urgent — عاجلة
+
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- DESCRIPTION -->
+
+      <div class="field">
+
+        <label for="description">
+
+          Problem Description —
+          وصف المشكلة
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <textarea
+          id="description"
+          name="description"
+          placeholder="Describe the problem — اكتبي تفاصيل المشكلة"
+          required
+        ></textarea>
+
+      </div>
+
+
+      <!-- IMAGE -->
+
+      <div class="field">
+
+        <label for="screenshot">
+
+          Screenshot —
+          صورة المشكلة
+
+          <span class="required">
+            *
+          </span>
+
+        </label>
+
+        <input
+          type="file"
+          id="screenshot"
+          name="screenshot"
+          accept="image/*"
+          required
+        >
+
+        <div class="hint">
+
+          Attach one image, maximum 5 MB —
+          أرفقي صورة واحدة، بحد أقصى 5 MB
+
+        </div>
+
+      </div>
+
+
+      <!-- SUBMIT -->
+
+      <button
+        type="submit"
+        id="submitBtn"
+      >
+
+        Submit Support Request —
+        إرسال طلب الدعم
+
+      </button>
+
+
+      <div
+        class="error"
+        id="errorBox"
+      ></div>
+
+
+    </form>
+
+  </div>
+
+
+  <!-- SUCCESS -->
+
+  <div
+    class="card success"
+    id="successCard"
+  >
+
+    <h2>
+
+      Request Submitted Successfully! —
+      تم إرسال الطلب بنجاح! ✅
+
+    </h2>
+
+    <p>
+
+      Your support request has been received. —
+      تم استلام طلب الدعم الخاص بك.
+
+    </p>
+
+    <p>
+
+      Ticket Number —
+      رقم الطلب
+
+    </p>
+
+    <div
+      class="ticket"
+      id="ticketNumber"
+    ></div>
+
+    <p>
+
+      Please keep this number for reference. —
+      احتفظي بهذا الرقم للمتابعة.
+
+    </p>
+
+    <button
+      onclick="location.reload()"
+    >
+
+      Submit Another Request —
+      إرسال طلب آخر
+
+    </button>
+
+  </div>
+
+
+  <div class="footer">
+
+    Kinderwald Nursery · Technical Support
+
+  </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/*
+==================================================
+IMPORTANT
+ضعي هنا رابط Google Apps Script Web App
+==================================================
+*/
+
+const API_URL =
+  "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+
+const form =
+  document.getElementById(
+    "supportForm"
+  );
+
+
+const submitBtn =
+  document.getElementById(
+    "submitBtn"
+  );
+
+
+const errorBox =
+  document.getElementById(
+    "errorBox"
+  );
+
+
+
+/*
+==================================================
+Convert image to Base64
+==================================================
+*/
+
+function fileToBase64(file) {
+
+  return new Promise(
+    (resolve, reject) => {
+
+      const reader =
+        new FileReader();
+
+
+      reader.onload =
+        function() {
+
+          resolve(
+            reader.result
+              .split(",")[1]
+          );
+
+        };
+
+
+      reader.onerror =
+        reject;
+
+
+      reader.readAsDataURL(file);
+
+    }
+  );
+
+}
+
+
+
+/*
+==================================================
+FORM SUBMIT
+==================================================
+*/
+
+form.addEventListener(
+  "submit",
+  async function(event) {
+
+    event.preventDefault();
+
+
+    errorBox.style.display =
+      "none";
+
+
+    /*
+    Check API URL
+    */
+
+    if (
+      API_URL.includes(
+        "PASTE_YOUR"
+      )
+    ) {
+
+      errorBox.textContent =
+        "The form is not connected yet — الفورم غير متصل بنظام الدعم.";
+
+      errorBox.style.display =
+        "block";
+
+      return;
+
+    }
+
+
+    /*
+    Get image
+    */
+
+    const file =
+      document
+        .getElementById(
+          "screenshot"
+        )
+        .files[0];
+
+
+    /*
+    Check image
+    */
+
+    if (!file) {
+
+      errorBox.textContent =
+        "Please attach a screenshot — من فضلك أرفقي صورة للمشكلة.";
+
+      errorBox.style.display =
+        "block";
+
+      return;
+
+    }
+
+
+    /*
+    Maximum 5 MB
+    */
+
+    if (
+      file.size >
+      5 * 1024 * 1024
+    ) {
+
+      errorBox.textContent =
+        "Image must be smaller than 5 MB — يجب ألا يتجاوز حجم الصورة 5 MB.";
+
+      errorBox.style.display =
+        "block";
+
+      return;
+
+    }
+
+
+    /*
+    Sending
+    */
+
+    submitBtn.disabled =
+      true;
+
+
+    submitBtn.textContent =
+      "Sending... — جاري الإرسال...";
+
+
+    try {
+
+
+      /*
+      Get form data
+      */
+
+      const data =
+        Object.fromEntries(
+          new FormData(form)
+            .entries()
+        );
+
+
+      /*
+      Remove file input
+      */
+
+      delete data.screenshot;
+
+
+      /*
+      Add image
+      */
+
+      data.attachment = {
+
+        name:
+          file.name,
+
+        mimeType:
+          file.type,
+
+        base64:
+          await fileToBase64(
+            file
+          )
+
+      };
+
+
+      /*
+      Send to Google Apps Script
+      */
+
+      const response =
+        await fetch(
+          API_URL,
+          {
+
+            method: "POST",
+
+            body:
+              JSON.stringify(
+                data
+              ),
+
+            headers: {
+
+              "Content-Type":
+                "text/plain;charset=utf-8"
+
+            }
+
+          }
+        );
+
+
+      const result =
+        await response.json();
+
+
+      if (!result.ok) {
+
+        throw new Error(
+          result.error ||
+          "Request failed"
+        );
+
+      }
+
+
+      /*
+      Show ticket number
+      */
+
+      document
+        .getElementById(
+          "ticketNumber"
+        )
+        .textContent =
+          result.ticket;
+
+
+      /*
+      Hide form
+      */
+
+      document
+        .getElementById(
+          "formCard"
+        )
+        .style.display =
+          "none";
+
+
+      /*
+      Show success
+      */
+
+      document
+        .getElementById(
+          "successCard"
+        )
+        .style.display =
+          "block";
+
+
+    }
+
+    catch (error) {
+
+
+      errorBox.textContent =
+        "Something went wrong. Please try again. — حدث خطأ، من فضلك حاولي مرة أخرى.";
+
+      errorBox.style.display =
+        "block";
+
+
+      submitBtn.disabled =
+        false;
+
+
+      submitBtn.textContent =
+        "Submit Support Request — إرسال طلب الدعم";
+
+    }
+
+  }
+
+);
+
+</script>
+
+
+</body>
+
+</html>
