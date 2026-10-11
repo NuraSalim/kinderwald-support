@@ -140,6 +140,18 @@
 
     }
 
+    .conditional-note {
+      display: none;
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: #fff8e6;
+      border: 1px solid #ead49a;
+      color: #5b4a1d;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
     .required {
 
       color: #b42318;
@@ -374,11 +386,11 @@
           </option>
 
           <option value="Kangaroo">
-            Kangaroo
+            Kangaroos
           </option>
 
           <option value="Squillers">
-            Squillers
+            Squirrels
           </option>
 
         </select>
@@ -468,6 +480,13 @@
 
           </option>
 
+          <option value="Upgrade Child Class">
+
+            Upgrade Child Class —
+            ترقية فصل الطفل
+
+          </option>
+
           <option value="App Problems">
 
             App Problems —
@@ -497,6 +516,18 @@
           </option>
 
         </select>
+
+        <div class="conditional-note" id="childCodeNote" role="note" aria-live="polite">
+          <strong>Important Notice — تنويه مهم:</strong><br>
+          To request a Child Code, please make sure you have completed the nursery application first.<br>
+          لطلب كود الطفل، يرجى التأكد من ملء استمارة التقديم للحضانة أولًا.
+        </div>
+
+        <div class="conditional-note" id="upgradeClassNote" role="note" aria-live="polite">
+          <strong>Important Notice — تنويه مهم:</strong><br>
+          A child may be upgraded to the next class only after the transfer has been confirmed.<br>
+          يتم رفع الطفل إلى المرحلة المتقدمة في حالة تأكيد نقله فقط.
+        </div>
 
       </div>
 
@@ -665,6 +696,12 @@
 
     </p>
 
+    <div class="conditional-note" style="display:block; text-align:left;" role="note">
+      <strong>Important Notice — تنويه مهم:</strong><br>
+      Your request will be processed within two business days. Please do not submit another request during this period.<br>
+      سيتم العمل على طلبك خلال يومين عمل. نرجو عدم تقديم طلب آخر خلال هذه المدة.
+    </div>
+
     <button
       onclick="location.reload()"
     >
@@ -707,6 +744,21 @@ const form =
     "supportForm"
   );
 
+
+const issueTypeSelect = document.getElementById("issueType");
+const childCodeNote = document.getElementById("childCodeNote");
+const upgradeClassNote = document.getElementById("upgradeClassNote");
+
+function updateIssueNotes() {
+  childCodeNote.style.display =
+    issueTypeSelect.value === "Request Child Code" ? "block" : "none";
+
+  upgradeClassNote.style.display =
+    issueTypeSelect.value === "Upgrade Child Class" ? "block" : "none";
+}
+
+issueTypeSelect.addEventListener("change", updateIssueNotes);
+updateIssueNotes();
 
 const submitBtn =
   document.getElementById(
